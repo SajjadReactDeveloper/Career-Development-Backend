@@ -3,9 +3,10 @@ const Test = require('../models/Test');
 
 exports.addTest = async(req, res) => {
     try {
-        const {university, question, A, B, C, D, correctOption} = req.body;
+        const {university, questions} = req.body;
+        console.log(university, questions)
         const newTest = new Test({
-            university, question, A, B, C, D, correctOption
+            university, questions
         })
         newTest.save();
         res.json("Test Added")

@@ -6,32 +6,7 @@ const testSchema = new mongoose.Schema({
         trim: true,
         required: true,
     },
-    question: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    A: {
-        type: String,
-        required: true,
-        trim: true,
-    },
-    B: {
-        type: String,
-        required: true,
-    },
-    C: {
-        type: String,
-        required: true,
-    },
-    D: {
-        type: String,
-        required: true,
-    },
-    correctOption: {
-        type: String,
-        required: true,
-    },
+    questions: [],
 }, {
     timestamps: true
 })

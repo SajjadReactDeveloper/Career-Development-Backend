@@ -41,7 +41,7 @@ app.use('/paper', paperRouter);
 app.use('/reply', replyRouter);
 app.use('/discussion', discussionRouter);
 
-const url = "mongodb://localhost:27017/";
+const url = "mongodb://localhost:27017/Career";
 mongoose.connect(url, {useNewUrlParser: true}, (err)=>{
     if(err) throw err;
     console.log("Connected to Database");

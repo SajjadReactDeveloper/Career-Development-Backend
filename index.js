@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -41,7 +42,7 @@ app.use('/paper', paperRouter);
 app.use('/reply', replyRouter);
 app.use('/discussion', discussionRouter);
 
-const url = "mongodb://localhost:27017/Career";
+const url = process.env.MONGODB_URL;
 mongoose.connect(url, {useNewUrlParser: true}, (err)=>{
     if(err) throw err;
     console.log("Connected to Database");
